@@ -89,14 +89,18 @@ public class Consola {
 	
 	public static int readInt() {
 		String num=null;
-		try(Scanner in= new Scanner(System.in)){	
+		try{	
+			Scanner in= new Scanner(System.in);
 			do {
 				System.out.println("Ingresa número");
 				num=in.nextLine();
 			}while(!esNumerico(num));
 			
-			return Integer.valueOf(num);
+			
+		}catch(Exception e) {
+			System.err.println(e.getMessage());
 		}
+		return Integer.valueOf(num);
 	}
 	
 	public static int readIntConTexto(String prompt) {

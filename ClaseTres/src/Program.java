@@ -43,7 +43,7 @@ public class Program {
 		int azar=r.nextInt(1,100);
 		int intentos=5, num=-1;
 					
-		do{
+		while(intentos>0){
 			
 			num=Consola.readInt();
 				
@@ -56,7 +56,9 @@ public class Program {
 				return;
 			}
 			intentos--;
-		}while(intentos>0);
+			
+		}
+		System.out.println("El número era: "+ azar);
 	}
 	
 	public static void adivinanzas() {
@@ -81,12 +83,12 @@ public class Program {
 //		System.out.println("Su número es: "+ num);
 		
 		
-		//Random();
+		Random();
 		
 		
 		//dado un numero si es primo
 		
-		primo();
+		//primo();
 		
 		
 	}
