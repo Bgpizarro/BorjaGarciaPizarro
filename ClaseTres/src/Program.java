@@ -82,8 +82,8 @@ public class Program {
 //		int num=Consola.readIntConTexto("Ingrese un número");
 //		System.out.println("Su número es: "+ num);
 		
-		
-		Random();
+		//5 intentos acertar numero random
+		//Random();
 		
 		
 		//dado un numero si es primo
