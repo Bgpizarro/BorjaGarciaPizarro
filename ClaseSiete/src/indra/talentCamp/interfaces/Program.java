@@ -61,7 +61,7 @@ public class Program {
 		System.out.println("Sumar 2+2 es "+resInt);
 		
 		//Ejemplo caja fuerte
-		CajaFuerte<String, String> claveTexto=new CajaFuerte<>("Abrete Sesamo");
+		CajaFuerte<String, String> claveTexto=new CajaFuerte<String,String>("Abrete Sesamo");
 		claveTexto.GuardarValor("La clave del home banking");
 		String claveOk=claveTexto.leerValor("Abrete Sesamo");
 		System.out.println("La clave es: "+claveOk);
@@ -69,13 +69,13 @@ public class Program {
 		System.out.println("Intentando acceder con una clave invalida");
 		
 		try {
-			String claveMal=claveTexto.leerValor("dasdasd");
+			//String claveMal=claveTexto.leerValor("dasdasd");
 		}catch(Exception ex) {
 			System.err.println(ex.getMessage());
 		}
 		
 		//caja fuerte con int
-		CajaFuerte<Integer,String> claveNum=new CajaFuerte<>("Contra");
+		CajaFuerte<Integer,String> claveNum=new CajaFuerte<Integer,String>("Contra");
 		claveNum.GuardarValor(34);
 		Integer claveTry=claveNum.leerValor("Contra");
 		System.out.println("La clave es: "+claveTry);
