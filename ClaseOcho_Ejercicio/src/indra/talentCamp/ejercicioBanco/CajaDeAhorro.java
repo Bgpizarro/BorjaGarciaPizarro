@@ -1,9 +1,10 @@
+package indra.talentCamp.ejercicioBanco;
 import java.util.List;
 
 public class CajaDeAhorro extends CuentaBancaria{
 
-	public CajaDeAhorro(int numeroCuenta, double saldo, Cliente cliente, List<Double> movimientos) {
-		super(numeroCuenta, saldo, cliente, movimientos);
+	public CajaDeAhorro(int numeroCuenta, Cliente cliente) {
+		super(numeroCuenta, cliente);
 		// TODO Auto-generated constructor stub
 	}
 

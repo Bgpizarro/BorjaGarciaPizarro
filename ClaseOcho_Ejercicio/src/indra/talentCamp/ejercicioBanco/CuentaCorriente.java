@@ -1,9 +1,12 @@
+package indra.talentCamp.ejercicioBanco;
 import java.util.List;
 
 public class CuentaCorriente extends CuentaBancaria{
 
-	public CuentaCorriente(int numeroCuenta, double saldo, Cliente cliente, List<Double> movimientos) {
-		super(numeroCuenta, saldo, cliente, movimientos);
+	//saldo al descubierto y tener tener saldo negativo
+	
+	public CuentaCorriente(int numeroCuenta, Cliente cliente) {
+		super(numeroCuenta, cliente);
 		// TODO Auto-generated constructor stub
 	}
 

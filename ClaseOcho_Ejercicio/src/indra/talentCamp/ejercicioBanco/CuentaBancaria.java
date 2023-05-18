@@ -1,3 +1,4 @@
+package indra.talentCamp.ejercicioBanco;
 import java.util.*;
 
 public abstract class CuentaBancaria {
@@ -8,10 +9,11 @@ public abstract class CuentaBancaria {
 	private List<Movimiento> movimientos;
 	
 	
-	public CuentaBancaria(int numeroCuenta, double saldo, Cliente cliente, List<Double> movimientos) {
+	
+	public CuentaBancaria(int numeroCuenta, Cliente cliente) {
 		super();
 		this.numeroCuenta = numeroCuenta;
-		this.saldo = saldo;
+		this.saldo = 0;
 		this.propietario = cliente;
 		this.movimientos = new ArrayList<>();
 	}

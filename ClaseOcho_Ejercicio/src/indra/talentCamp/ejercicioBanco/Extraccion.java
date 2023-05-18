@@ -1,3 +1,4 @@
+package indra.talentCamp.ejercicioBanco;
 
 public class Extraccion extends Movimiento {
 
