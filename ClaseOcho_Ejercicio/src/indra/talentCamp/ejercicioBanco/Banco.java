@@ -13,13 +13,26 @@ public class Banco {
 	
 	
 	
-	public void crearCajaDeAhorro(Cliente cliente) {
-		cuentas.add(new CajaDeAhorro(cuentas.size(),cliente));
+	public CajaDeAhorro crearCajaDeAhorro(Cliente cliente) {
+		CajaDeAhorro cuenta=new CajaDeAhorro(cliente);
+		this.cuentas.add(cuenta);
+		return cuenta;
 	}
 	
-	public void crearCuentaCorriente(Cliente cliente) {
-		cuentas.add(new CuentaCorriente(cuentas.size(),cliente));
+	public CuentaCorriente crearCuentaCorriente(Cliente cliente) {
+		CuentaCorriente cuenta=new CuentaCorriente(cliente);
+		this.cuentas.add(cuenta);
+		return cuenta;
 	}
 
+
+
+	public List<CuentaBancaria> getCuentas() {
+		return Collections.unmodifiableList(cuentas);
+	}
+
+	public CuentaBancaria buscarCuenta(int numeroCuenta) {
+		return this.cuentas.stream().filter(c->c.getNumeroCuenta()==numeroCuenta).findFirst().orElse(null);
+	}
 	
 }
