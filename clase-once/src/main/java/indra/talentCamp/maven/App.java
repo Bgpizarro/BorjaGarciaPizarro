@@ -8,17 +8,11 @@ import indra.talentCamp.models.Persona;
 
 public class App {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 		System.out.println("Hola mundo maven");
 		
 		
-		
-		
-		//gson.fromJson(json, Properties.class);
-		
-		
-		System.out.println("---------");
 		
 	}
 
