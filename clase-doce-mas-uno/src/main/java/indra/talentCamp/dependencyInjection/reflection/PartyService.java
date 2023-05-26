@@ -10,6 +10,8 @@ public class PartyService {
 	
 	private Repository repository;
 	
+
+	
 	public PartyService() {
 		if(PartyService.repositoryClass==null) {
 			throw new Error("Te olvidaste de configurar el PartyService");
@@ -17,7 +19,7 @@ public class PartyService {
 		
 		
 		try {
-			this.repository=(Repository)PartyService.repositoryClass.newInstance();
+			this.repository=(Repository)PartyService.repositoryClass.getConstructor().newInstance();
 		}catch(Exception e ) {
 			throw new Error("El constructor es privado");
 		}

@@ -8,6 +8,9 @@ public class PartyService {
 		this.repository=repository;
 	}
 	
+	public PartyService() {
+		super();
+	}
 	public void haveFun() {
 		System.out.println("Everybody have fun tonight");
 		System.out.println("guardemos en repo");
