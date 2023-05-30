@@ -20,7 +20,18 @@ public class AutomovilServiceImplementation implements AutomovilService {
 			setMatricula("43674MD");
 			setElectrico(true);
 		}};*/
-		return this.repository.FindById(55);
+		return this.repository.findById(55);
+	}
+
+	@Override
+	public void registrarAutomovil(Automovil autoNuevo) {
+		if(autoNuevo.getMarca().equalsIgnoreCase("Tesla")) {
+			autoNuevo.setElectrico(true);
+		}else {
+			autoNuevo.setElectrico(false);
+		}
+		
+		this.repository.save(autoNuevo);
 	}
 
 }

@@ -4,5 +4,6 @@ import indra.talentCamp.springBoot.models.Automovil;
 
 public interface AutomovilRepository {
 
-	public Automovil FindById(int id);
+	public Automovil findById(int id);
+	public void save(Automovil autoNuevo);
 }
